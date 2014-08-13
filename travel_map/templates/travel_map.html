@@ -58,12 +58,14 @@
                     click: function (e) {
                     	$.get('/travel_map/visit?code=' + e.point.code),
                     },
-		            select: {
+                },
+                states: {
+                	select: {
 		                color: '#47FF66',
 		                borderColor: 'black',
 		                dashStyle: 'dot',
 		            },
-                },
+                }
             }]
         });
     });
