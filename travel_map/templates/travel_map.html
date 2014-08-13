@@ -54,8 +54,7 @@
                         	events: {
                         		click: function (e) {
                             		$.get('/travel_map/visit?code=' + e.point.code)
-                           			chart = this.series.chart;
-                            		chart.redraw()
+                           			location.reload()
                             },
                         }
                     }
