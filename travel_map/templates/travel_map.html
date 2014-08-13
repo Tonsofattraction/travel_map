@@ -53,7 +53,7 @@
                    		 point: {
                         	events: {
                         		click: function (e) {
-                            		$.get('/travel_map/visit?code=' + e.point.code).success(location.reload())
+                            		$.get('/travel_map/visit?code=' + e.point.code)
                             },
                         }
                     }

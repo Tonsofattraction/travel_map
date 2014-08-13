@@ -4,7 +4,7 @@ Created on Aug 11, 2014
 @author: noob
 '''
 
-from django.http import HttpResponseNotAllowed, HttpResponse
+from django.http import HttpResponseNotAllowed, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from models import Country
@@ -35,4 +35,4 @@ def visit(request):
     else:
         country.value = True
     country.save()
-    return HttpResponse()
+    return HttpResponseRedirect("/travel_map/")
