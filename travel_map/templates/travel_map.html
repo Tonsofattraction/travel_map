@@ -48,6 +48,19 @@
                 },
             },
             
+            plotOptions: {
+                	series: {
+                   		 point: {
+                        	events: {
+                        		click: function (e) {
+                            		$.get('/travel_map/visit?code=' + e.point.code)
+                           			chart = this.series.chart;
+                            		chart.reflow()
+                            },
+                        }
+                    }
+                }
+            },
 
             series : [{
             	allowPointSelect: true,
@@ -55,13 +68,6 @@
                 mapData: Highcharts.maps['custom/world'],
                 joinBy: ['iso-a2', 'code'],
                 cursor: 'pointer',
-                events: {
-                    click: function (e) {
-                    	$.get('/travel_map/visit?code=' + e.point.code)
-                   		chart = this.series.chart;
-                    	chart.reflow()
-                    },
-                },
             }]
         });
     });
