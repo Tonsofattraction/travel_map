@@ -29,7 +29,7 @@
             },
             
             title: {
-            	text: ' '
+            	text: ' ',
             },
             
             colorAxis: {
@@ -38,13 +38,13 @@
                 type: 'linear',
                 gridLineColor: 'white',
                 minColor: '#FCAD82',
-                maxColor: '#47FF66'
+                maxColor: '#47FF66',
             },
             
             tooltip: {
                 useHtml: true,
                 formatter: function() {
-                	return this.point.name
+                	return this.point.name,
                 }
             },
             
@@ -53,16 +53,16 @@
                 data : data,
                 mapData: Highcharts.maps['custom/world'],
                 joinBy: ['iso-a2', 'code'],
-                cursor: 'pointer'
+                cursor: 'pointer',
                 events: {
                     click: function (e) {
-                    	$.get('/travel_map/visit?code=' + e.point.code)
-                    }
+                    	$.get('/travel_map/visit?code=' + e.point.code),
+                    },
 		            select: {
 		                color: '#47FF66',
 		                borderColor: 'black',
-		                dashStyle: 'dot'
-		            }
+		                dashStyle: 'dot',
+		            },
                 },
             }]
         });
