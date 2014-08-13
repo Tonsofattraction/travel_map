@@ -4,7 +4,7 @@ Created on Aug 11, 2014
 @author: noob
 '''
 
-from django.http import HttpResponseNotAllowed, HttpResponseRedirect
+from django.http import HttpResponseNotAllowed, HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from models import Country
