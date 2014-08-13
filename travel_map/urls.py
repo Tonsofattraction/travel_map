@@ -6,9 +6,9 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^travel_map/$', 'views.home', name='home'),
-    url(r'^travel_map/get_data$', 'views.get_data'),
-    url(r'^travel_map/visit', 'views.visit'),
+    url(r'^travel_map/$', 'travel_map.views.home', name='home'),
+    url(r'^travel_map/get_data$', 'travel_map.views.get_data'),
+    url(r'^travel_map/visit', 'travel_map.views.visit'),
     
 
     # Uncomment the admin/doc line below to enable admin documentation:

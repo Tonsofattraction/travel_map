@@ -104,7 +104,7 @@ ROOT_URLCONF = 'travel_map.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'travel_map.wsgi.application'
 
-FTEMPLATE_DIRS = (
+TEMPLATE_DIRS = (
     '/home/tonsofattraction/travel_map/travel_map/templates'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
