@@ -37,8 +37,8 @@
                 max: 1,
                 type: 'linear',
                 gridLineColor: 'white',
-                minColor: '#E1CBFF',
-                maxColor: '#6A00FF'
+                minColor: '#FCAD82',
+                maxColor: '#47FF66'
             },
             
             tooltip: {
@@ -48,30 +48,21 @@
                 }
             },
             
-            plotOptions: {
-            	series: {
-            		allowPointSelect: true,
-            		point: {
-            			events: {
-	            			select: {
-	            				color: '#6A00FF'
-	            			},
-				            unselect: {
-								color: '#E1CBFF'
-							}
-            			}
-            		}
-            	}
-            },
 
             series : [{
                 data : data,
                 mapData: Highcharts.maps['custom/world'],
                 joinBy: ['iso-a2', 'code'],
+                cursor: 'pointer'
                 events: {
                     click: function (e) {
                     	$.get('/travel_map/visit?code=' + e.point.code)
                     }
+		            select: {
+		                color: '#47FF66',
+		                borderColor: 'black',
+		                dashStyle: 'dot'
+		            }
                 },
             }]
         });
