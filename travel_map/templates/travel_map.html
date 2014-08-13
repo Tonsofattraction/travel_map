@@ -58,15 +58,11 @@
                 events: {
                     click: function (e) {
                     	$.get('/travel_map/visit?code=' + e.point.code)
+                    	console.log(e.point.color)
+                    	e.point.color = '#47FF66'
+                   		console.log(e.point.color)
                     },
                 },
-                states: {
-                	select: {
-		                color: '#47FF66',
-		                borderColor: 'black',
-		                dashStyle: 'dot',
-		            },
-                }
             }]
         });
     });
