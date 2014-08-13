@@ -55,7 +55,7 @@
                         		click: function (e) {
                             		$.get('/travel_map/visit?code=' + e.point.code)
                            			chart = this.series.chart;
-                            		chart.reflow()
+                            		chart.redraw()
                             },
                         }
                     }
